@@ -1,0 +1,20 @@
+﻿@model Project.Domain.Entities.Item
+
+<div class="item">
+
+    <tr>
+        <td>@Model.ItemID</td>
+        <td>@Model.ItemText
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit") |
+        @*  @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })**@
+            @using (Html.BeginForm("RemoveFromBlog", "Blog"))
+                    {
+                        @Html.Hidden("ItemID")
+                        @Html.HiddenFor(x => x.ItemID)
+                        <input class="actionButtons" type="submit" value="Remove" />
+                    }
+        </td>
+    </tr>
+</div>

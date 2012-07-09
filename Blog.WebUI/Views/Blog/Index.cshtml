@@ -1,0 +1,27 @@
+﻿@model Project.WebUI.Models.ItemIndexViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create new", "AddToBlog")
+</p>
+<table>
+    <tr>
+        <th>
+            #
+        </th>
+        <th>
+            Blogpost
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.blogposts.Items) {
+    Html.RenderPartial("BlogSummary", item);
+}
+
+</table>

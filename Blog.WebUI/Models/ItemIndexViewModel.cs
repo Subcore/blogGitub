@@ -8,7 +8,8 @@ namespace Project.WebUI.Models
 {
     public class ItemIndexViewModel
     {
-        public Blogpost blogposts { get; set; }
+        public Item Items { get; set; }
+        //public Blogpost blogposts { get; set; }
         public string ReturnUrl { get; set; }
     }
 }

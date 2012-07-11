@@ -7,28 +7,29 @@ using System.Web.Mvc;
 
 namespace Project.Domain.Entities
 {
-    public class Blogpost
-    {
-        private List<Item> ItemCollection = new List<Item>();
+    //public class Blogpost
+    //{
+    //    private List<Item> ItemCollection = new List<Item>();
 
-        public void AddItem(string itemtext)
-        {
-            int itemid = ItemCollection.Count();
-            ItemCollection.Add(new Item { ItemID = itemid , ItemText = itemtext });
-        }
+    //    public Item Item { get; set; }
 
-        public void DeleteItem(int itemid)
-        {
-            //ItemCollection.RemoveAll(l => l.ItemID == l.ItemID);
-            ItemCollection.RemoveAt(itemid);
-        }
+    //    /*public void AddItem(string itemtext)
+    //    {
+    //        int itemid = ItemCollection.Count();
+    //        ItemCollection.Add(new Item { ItemID = itemid , ItemText = itemtext });
+    //    }
 
-        public IEnumerable<Item> Items
-        {
-            get { return ItemCollection; }
-        }
-    }
-    
+    //    public void DeleteItem(int itemid)
+    //    {
+    //        ItemCollection.RemoveAt(itemid);
+    //    }*/
+
+    //    public IEnumerable<Item> Items
+    //    {
+    //        get { return ItemCollection; }
+    //    }
+    //}
+
     public class Item
     {
         public int ItemID { get; set; }

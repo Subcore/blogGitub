@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using Project.WebUI.Infrastructure;
+//using Project.WebUI.Infrastructure;
 using Project.Domain.Entities;
 
 namespace Blog.WebUI
@@ -26,14 +26,8 @@ namespace Blog.WebUI
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Blog", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+                new { controller = "Item", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
-
-            /*routes.MapRoute(
-                "Default", // Route name
-                "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
-            );*/
 
             routes.MapRoute(null, "{controller}/{action}");
         }
@@ -44,9 +38,6 @@ namespace Blog.WebUI
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
-
-            ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory());
-            //ModelBinders.Binders.Add(typeof(Blogpost), new BlogpostModelBinder());
         }
     }
 }
